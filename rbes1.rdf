@@ -1,0 +1,105 @@
+
+@prefix schema:  	<http://schema.org/> .
+@prefix owl:     	<http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    	<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: 	<http://purl.org/dc/terms/> .
+@prefix dctype:  	<http://purl.org/dc/dcmitype/> .
+@prefix vann:    	<http://purl.org/vocab/vann/> .
+@prefix voaf:    	<http://purl.org/vocommons/voaf#> .
+@prefix foaf:    	<http://xmlns.com/foaf/0.1/> .
+@prefix vs:      	<http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd:     	<http://www.w3.org/2001/XMLSchema#> .
+@prefix cc:      	<http://creativecommons.org/ns#> .
+@prefix odrl: 		<http://www.w3.org/ns/odrl/2/> .
+@prefix saref: 		<https://saref.etsi.org/core/> .
+@prefix soa:		<https://www.opengroup.org/soa/ontology/20140404/soa.owl> .
+@prefix sosa: 		<http://www.w3.org/ns/sosa/> .
+@prefix rdf: 		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos:           <http://www.w3.org/2004/02/skos/core#>.
+
+@prefix	rfidata:		<https://www.rfi.org/data/>	.
+@prefix	rfischema:		<https://www.rfi.org/schema/>	.
+
+
+## ttl validator:
+## http://ttl.summerofcode.be/
+
+## TESTING YOUR ODRL schema:
+## https://odrlapi.appspot.com/
+
+
+
+#@prefix rfidata: 		<http://purl.org/ontology/rbes#> .
+#@base            	<http://purl.org/ontology/rbes> .
+
+<> a owl:Ontology, voaf:Vocabulary ;
+    dcterms:title "RBES Ontology"@en ;
+    vann:preferredNamespacePrefix "rbes" ;
+    vann:preferredNamespaceUri "http://purl.org/ontology/rbes#" ;
+    dcterms:description "An RDI Ontology."@en ; 
+    dcterms:modified "2024-06-21"^^xsd:date ;
+    owl:versionInfo "1.0.0" ;
+    cc:license <http://creativecommons.org/licenses/by/3.0/> ;
+    dcterms:creator "Tope Omitola"
+.
+
+rfischema:Asset			a						owl:Class;
+					rdfs:label 				"RBES Asset"@en ;
+					rdfs:subClassOf 		saref:Device, odrl:Asset ; 
+.
+
+
+rfischema:Service			a						owl:Class;
+					rdfs:label 				"RBES Service"@en ;
+					rdfs:subClassOf 		odrl:Permission,  soa:Element ;
+.
+
+rfischema:ServiceBundle			a						owl:Class;
+							rdfs:label 				"RBES Service Bundle"@en ;
+							rdfs:subClassOf 		odrl:Policy, soa:ServiceComposition ;
+.
+
+
+rfischema:digest 
+	rdfs:comment		"Recommended practice is to identify the related resource by means of a URI. If this is not possible or feasible, a string conforming to a formal identification system may be provided." @en ;
+	a 					rdf:Property ;
+	rdfs:label 			"Behavioural Digest"@en ;
+    rdfs:subPropertyOf	dcterms:requires ;
+.
+
+rfischema:command    a 		owl:ObjectProperty ;
+		rdfs:domain		rfischema:Asset ;
+		rdfs:range		saref:FunctionOfInterest ;
+.
+
+
+rfischema:primaryEffect   a				owl:ObjectProperty ;
+					rdfs:domain		rfischema:Asset ;
+					rdfs:range 		saref:Property ;
+.
+
+rfischema:secondaryEffect   a				owl:ObjectProperty ;
+					rdfs:domain		rfischema:Asset ;
+					rdfs:range 		saref:Property ;
+.
+
+rfischema:Direction	a 			owl:Class;
+		rdfs:subClassOf 	skos:Concept,
+							sosa:ObservableProperty ;
+.
+
+rfischema:directionOfPrimaryEffect	a	owl:ObjectProperty ;				
+				rdfs:domain			rfischema:Asset ;
+				rdfs:range			rfischema:Direction ;
+.
+
+
+rfischema:directionOfSecondaryEffect	a	owl:ObjectProperty ;				
+				rdfs:domain			rfischema:Asset ;
+				rdfs:range			rfischema:Direction ;
+.
+
+
+rfischema:Sound 			a		saref:Property ; .
+
+saref:Luminance 		a		saref:Property ; .

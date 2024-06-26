@@ -20,12 +20,6 @@
 @prefix	rfischema:		<https://github.com/tope/metadata/blob/main/rbes1.rdf>	.
 
 
-## ttl validator:
-## http://ttl.summerofcode.be/
-
-## TESTING YOUR ODRL schema:
-## https://odrlapi.appspot.com/
-
 <> a owl:Ontology, voaf:Vocabulary ;
     dcterms:title "RBES Ontology"@en ;
     vann:preferredNamespacePrefix "rbes" ;

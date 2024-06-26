@@ -17,7 +17,7 @@
 @prefix rdf: 		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix skos:           <http://www.w3.org/2004/02/skos/core#>.
 
-@prefix	rfischema:		<https://github.com/tope/metadata/blob/main/rbes1.rdf>	.
+@prefix	rfischema:		<https://raw.githubusercontent.com/tope/metadata/main/rbes1.rdf>	.
 
 
 <> a owl:Ontology, voaf:Vocabulary ;

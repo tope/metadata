@@ -17,7 +17,6 @@
 @prefix rdf: 		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix skos:           <http://www.w3.org/2004/02/skos/core#>.
 
-@prefix	rfidata:		<https://www.rfi.org/data/>	.
 @prefix	rfischema:		<https://github.com/tope/metadata/blob/main/rbes1.rdf>	.
 
 
@@ -26,11 +25,6 @@
 
 ## TESTING YOUR ODRL schema:
 ## https://odrlapi.appspot.com/
-
-
-
-#@prefix rfidata: 		<http://purl.org/ontology/rbes#> .
-#@base            	<http://purl.org/ontology/rbes> .
 
 <> a owl:Ontology, voaf:Vocabulary ;
     dcterms:title "RBES Ontology"@en ;

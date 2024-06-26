@@ -18,7 +18,7 @@
 @prefix skos:           <http://www.w3.org/2004/02/skos/core#>.
 
 @prefix	rfidata:		<https://www.rfi.org/data/>	.
-@prefix	rfischema:		<https://www.rfi.org/schema/>	.
+@prefix	rfischema:		<https://github.com/tope/metadata/blob/main/rbes1.rdf>	.
 
 
 ## ttl validator:
@@ -100,6 +100,3 @@ rfischema:directionOfSecondaryEffect	a	owl:ObjectProperty ;
 .
 
 
-rfischema:Sound 			a		saref:Property ; .
-
-saref:Luminance 		a		saref:Property ; .

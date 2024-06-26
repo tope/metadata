@@ -24,7 +24,7 @@
     dcterms:title "RBES Ontology"@en ;
     vann:preferredNamespacePrefix "rbes" ;
     vann:preferredNamespaceUri "http://purl.org/ontology/rbes#" ;
-    dcterms:description "An RDI Ontology."@en ; 
+    dcterms:description "A Rule Based Encoding Standard (RBES) Metadata."@en ; 
     dcterms:modified "2024-06-21"^^xsd:date ;
     owl:versionInfo "1.0.0" ;
     cc:license <http://creativecommons.org/licenses/by/3.0/> ;
